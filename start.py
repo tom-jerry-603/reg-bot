@@ -1,11 +1,13 @@
 import subprocess
 import time
+from getpass import getpass
 
-password=input("Password: ")
+password = getpass("Enter your database password: ")
+
 # List of scripts to run
 coldkey="baz"
 hotkeys = [
-    "zeus18", "zeus19", "zeus20"
+    "zeus32", "zeus33", "zeus34"
 ]
 
 max_parallel = 20      # limit to 20 at once
