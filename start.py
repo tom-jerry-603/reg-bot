@@ -5,9 +5,10 @@ from getpass import getpass
 password = getpass("Enter your database password: ")
 
 # List of scripts to run
-coldkey="baz"
+netuid = 18
+coldkey="kgi"
 hotkeys = [
-    "zeus32", "zeus33", "zeus34"
+    "zeus25", "zeus26", "zeus27"
 ]
 
 max_parallel = 20      # limit to 20 at once
@@ -17,7 +18,7 @@ try:
     while True:
         for hotkey in hotkeys:
             # Start a new process
-            p = subprocess.Popen(["expect", "sn-reg-2.sh", password, coldkey, hotkey])
+            p = subprocess.Popen(["expect", "sn-reg-2.sh", password, coldkey, hotkey, netuid])
             processes.append(p)
 
             # If we reached the max limit, wait until at least one finishes

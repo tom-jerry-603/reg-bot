@@ -3,6 +3,7 @@
 set password [lindex $argv 0]
 set coldkey [lindex $argv 1]
 set hotkey [lindex $argv 2]
+set netuid [lindex $argv 3]
 set timeout 30  ;# Increase timeout value
 set retry_interval 10  ;# Reduced retry interval
 
@@ -19,7 +20,7 @@ proc registration {} {
     global password
     global coldkey
     global hotkey
-    spawn btcli s register --netuid 18 --wallet.name $coldkey --wallet.hotkey $hotkey --yes
+    spawn btcli s register --netuid $netuid --wallet.name $coldkey --wallet.hotkey $hotkey --yes
 
     # Log timestamp for registration attempt
     puts "[timestamp] Attempting registration..."
