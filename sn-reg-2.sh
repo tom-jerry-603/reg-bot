@@ -17,6 +17,7 @@ proc timestamp {} {
 
 # Function for registration
 proc registration {} {
+    global netuid
     global password
     global coldkey
     global hotkey
