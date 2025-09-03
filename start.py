@@ -5,7 +5,7 @@ from getpass import getpass
 password = getpass("Enter your database password: ")
 
 # List of scripts to run
-netuid = 18
+netuid = "18"
 coldkey="kgi"
 hotkeys = [
     "zeus25", "zeus26", "zeus27"
