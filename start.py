@@ -5,13 +5,13 @@ from getpass import getpass
 password = getpass("Enter your database password: ")
 
 # List of scripts to run
-netuid = "43"
-coldkey="witt"
+netuid = "18"
+coldkey="baz"
 hotkeys = [
-    "graph-1", "graph-2", "graph-3"
+    "zeus5", "zeus6", "zeus7"
 ]
 
-max_parallel = 30      # limit to 20 at once
+max_parallel = 10      # limit to 20 at once
 
 processes = []
 try:
